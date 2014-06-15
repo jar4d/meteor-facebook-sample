@@ -1,4 +1,5 @@
 function Facebook(accessToken) {
+    console.log('hi 1');
     this.fb = Meteor.require('fbgraph');
     this.accessToken = accessToken;
     this.fb.setAccessToken(this.accessToken);
@@ -28,9 +29,8 @@ Facebook.prototype.getUserData = function() {
 Meteor.methods({
     getUserData: function() {
         var fb = new Facebook(Meteor.user().services.facebook.accessToken);
-        console.log(fb);
+        console.log('hi 3');
         var data = fb.getUserData();
         return data;
     }
 });
-
