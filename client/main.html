@@ -6,8 +6,7 @@
 {{>header}}
 <div class="container app-width">
   <div id="main">
-    {{> hello}}
-    {{renderPage}}
+    {{> home}}
   </div>
 </div>
 </body>
@@ -21,4 +20,9 @@
       </ul>
     </div>
   </div>
+</template>
+
+<template name="home">
+    <button class="btn" id="btn-user-data">Get User Data</button>
+        <pre id="result"></pre>
 </template>

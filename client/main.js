@@ -3,21 +3,22 @@ if (Meteor.isClient) {
     return "Help your friends find a match.";
   };
 
-  Template.hello.events({
-    'click input': function () {
-      // This is just sample code that we haven't deleted yet.
-      if (typeof console !== 'undefined')
-        console.log("You pressed the button");
+  Accounts.ui.config({
+    requestPermissions: {
+      facebook: ['email', 'user_friends','friends_events', 'friends_location', 'friends_about_me'],
     }
   });
 
-Accounts.ui.config({
-  requestPermissions: {
-    facebook: ['email', 'user_friends','friends_events', 'friends_location', 'friends_about_me'],
-  }
-});
+  Template.home.events({
+      'click #btn-user-data': function(e) {
+          Meteor.call('getUserData', function(err, data) {
+               $('#result').text(JSON.stringify(data, undefined, 4));
+           });
+      }
+  });
 
 }
+
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
