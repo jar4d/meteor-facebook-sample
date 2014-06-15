@@ -1,0 +1,27 @@
+<head>
+  <title>sample</title>
+</head>
+
+<body>
+{{>header}}
+<div class="container app-width">
+  <div id="main">
+    {{>welcome}}
+  </div>
+</div>
+</body>
+
+<template name="welcome">
+  hello there welcome template!  
+</template>
+
+<template name="header">
+  <div class="navbar navbar-fixed-top app-width">
+    <div class="navbar-inner">
+      <a href="/" class="brand">Facebook</a>
+      <ul class="nav pull-right">
+        <li>lists!</li>
+      </ul>
+    </div>
+  </div>
+</template>
