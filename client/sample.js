@@ -1,11 +1,11 @@
 if (Meteor.isClient) {
   Template.hello.greeting = function () {
-    return "Welcome to sample.";
+    return "Help your friends find a match.";
   };
 
   Template.hello.events({
     'click input': function () {
-      // template data, if any, is available in 'this'
+      // This is just sample code that we haven't deleted yet.
       if (typeof console !== 'undefined')
         console.log("You pressed the button");
     }
