@@ -1,0 +1,30 @@
+body {
+  border-top: 3px solid #F33343;
+  background: #f0eff4;
+  color: #151826;
+}
+
+a {
+  color: #f1a811;
+}
+
+a:visited {
+  color: #5e6178;
+}
+
+.navbar .brand {
+  margin: 10px;
+  padding: 0;
+}
+
+.navbar {
+  background: #5e6178;
+}
+
+.navbar .nav.pull-right {
+  margin: 10px;
+}
+
+.container {padding:10px;}
+
+#main {margin: 40px 0 0 0;}
