@@ -1,4 +1,4 @@
-flint
+meteor-facebook-sample
 ======================
 
 ## Installation
