@@ -1,29 +1,20 @@
 <head>
   <title>sample</title>
+  <link href="http://fonts.googleapis.com/css?family=Calligraffitti|Raleway" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 {{>header}}
-<div class="container app-width">
   <div id="main">
-    {{> home}}
-  </div>
-</div>
-</body>
-
-<template name="header">
-  <div class="navbar navbar-fixed-top app-width">
-    <div class="navbar-inner">
-      <a href="/" class="brand">flint</a>
-      <ul class="nav pull-right">
-        <li><img src="{{profilePic}}" /> <span>{{>loginButtons}}</span></li>
-      </ul>
+    <div class="container app-width">
+      {{> home}}
     </div>
   </div>
-</template>
+{{>footer}}
+</body>
 
 <template name="home">
     <button class="btn" id="btn-user-data">Get User Data</button>
         <pre id="result"></pre>
-
 </template>
+

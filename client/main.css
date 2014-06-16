@@ -1,40 +1,74 @@
 body {
-  border-top: 3px solid #F33343;
-  background: #f0eff4;
-  color: #151826;
+  border-top: 4px solid #5F788C;
+  background: #F6F6F8;
+  color: #2E2D33;
+  font-family: 'Raleway', Helvetica, sans-serif;
 }
 
-a {
-  color: #f1a811;
+#main {margin: 40px 0 0 0;}
+
+a, a:visited {
+  color: #3F4F5C;
 }
 
-a:visited {
-  color: #5e6178;
-}
+/* Nav Bar
+/* ------------------------------ */
 
 .navbar .brand {
   margin: 10px;
   padding: 0;
+  text-shadow: none;
+  color: #F6F6F8;
+  font-size: 28px;
+  font-weight: normal;
 }
 
 #login-buttons .single-login-button {
-  background: #f0eff4;
-  color: #151826;
+  background: #F6F6F8;
+  color: #2E2D33;
 }
 
 #login-buttons .login-display-name {
   margin: 0 8px;
+  font-family: inherit;
 }
 
 .navbar-inner {
-  background: #5e6178;
-  color: #f0eff4;
+  background: #3F4F5C;
+  color: #F6F6F8;
+  border: none;
+  border-radius: 0;
+}
+
+.navbar-inner h1 {
+  margin:0;
+  font-family: Calligraffitti;
+}
+
+.navbar-inner a, .navbar-inner a:visited {
+  color:#f6f6f8;
 }
 
 .navbar .nav.pull-right {
   margin: 10px;
 }
 
-.container {padding:10px;}
+/* Container
+/* ------------------------------ */
 
-#main {margin: 40px 0 0 0;}
+.navbar-inner .container {
+  max-width: 1170px;
+}
+
+#main .container {
+  min-height: 500px;
+}
+
+/* Footer
+/* ------------------------------ */
+
+footer {
+  border-top: 1px solid #2E2D33;
+  background: #BD5248;
+  padding: 10px 0 120px;
+}

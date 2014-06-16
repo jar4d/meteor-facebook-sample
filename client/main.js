@@ -1,18 +1,15 @@
 if (Meteor.isClient) {
 
-  Template.hello.greeting = function () {
-    return "Help your friends find a match.";
-  };
-
   Accounts.ui.config({
     requestPermissions: {
       facebook: ['public_profile', 'email', 'user_friends']
     }
   });
 
-    Meteor.call('getProfilePic', function(err, data) {
-      return Session.set('profilePic', data.location);
-    });
+  // Set session variables
+  Meteor.call('getProfilePic', function(err, data) {
+    return Session.set('profilePic', data.location);
+  });
 
   Template.home.events({
     'click #btn-user-data': function(e) {
