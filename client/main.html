@@ -16,7 +16,7 @@
     <div class="navbar-inner">
       <a href="/" class="brand">flint</a>
       <ul class="nav pull-right">
-        <li>{{>loginButtons}}</li>
+        <li><img src="{{profilePic}}" /> <span>{{>loginButtons}}</span></li>
       </ul>
     </div>
   </div>
@@ -25,4 +25,5 @@
 <template name="home">
     <button class="btn" id="btn-user-data">Get User Data</button>
         <pre id="result"></pre>
+
 </template>

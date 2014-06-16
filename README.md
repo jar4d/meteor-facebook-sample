@@ -8,7 +8,7 @@ flint
 
 ```
 curl https://install.meteor.com | /bin/sh
-npm install -g meteorite
+sudo npm install -g meteorite
 ```
 
  * In the app's directory, run `mrt update`.

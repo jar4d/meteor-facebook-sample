@@ -17,8 +17,18 @@ a:visited {
   padding: 0;
 }
 
-.navbar {
+#login-buttons .single-login-button {
+  background: #f0eff4;
+  color: #151826;
+}
+
+#login-buttons .login-display-name {
+  margin: 0 8px;
+}
+
+.navbar-inner {
   background: #5e6178;
+  color: #f0eff4;
 }
 
 .navbar .nav.pull-right {

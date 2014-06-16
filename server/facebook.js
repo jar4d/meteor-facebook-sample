@@ -1,6 +1,6 @@
 function Facebook(accessToken) {
-    console.log('hi 1');
     this.fb = Meteor.require('fbgraph');
+    console.log('Successful call to the Facebook Open Graph');
     this.accessToken = accessToken;
     this.fb.setAccessToken(this.accessToken);
     this.options = {
@@ -26,11 +26,20 @@ Facebook.prototype.getUserData = function() {
     return this.query('me');
 }
 
+Facebook.prototype.getProfilePic = function() {
+    return this.query('me/picture?height=40&width=40');
+}
+
 Meteor.methods({
     getUserData: function() {
         var fb = new Facebook(Meteor.user().services.facebook.accessToken);
-        console.log('hi 3');
         var data = fb.getUserData();
+        return data;
+    },
+    getProfilePic: function() {
+        var pic = new Facebook(Meteor.user().services.facebook.accessToken);
+        var data = pic.getProfilePic();
+        console.log('getProfilePic function');
         return data;
     }
 });
