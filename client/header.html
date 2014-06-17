@@ -4,7 +4,7 @@
       <div class="container">
         <h1><a href="/" class="brand">flint</a></h1>
         <ul class="nav pull-right">
-          <li><img src="{{profilePic}}" /> <span><a href="/profile">{{>loginButtons}}</a></span></li>
+          <li>{{#if currentUser}}<img src="{{profilePic}}" />{{/if}}<span><a href="/profile">{{>loginButtons}}</a></span></li>
         </ul>
       </div>
     </div>

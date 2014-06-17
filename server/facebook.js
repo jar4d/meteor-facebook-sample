@@ -1,3 +1,27 @@
+Accounts.onCreateUser(function(options, user) {
+  if (options.profile) {
+    options.profile.picture = getFbPicture(user.services.facebook.accessToken);
+    user.profile = options.profile;
+  }
+  return user;
+});
+
+// Save the profile pic to the user object
+var getFbPicture = function(accessToken) {
+  var result;
+  result = Meteor.http.get("https://graph.facebook.com/me", {
+    params: {
+      access_token: accessToken,
+      fields: 'picture'
+    }
+  });
+  if (result.error) {
+    throw result.error;
+  }
+  return result.data.picture.data.url;
+};
+
+// Initiate FB
 function Facebook(accessToken) {
     this.fb = Meteor.require('fbgraph');
     console.log('Successful call to the Facebook Open Graph');
@@ -39,7 +63,7 @@ Meteor.methods({
     getProfilePic: function() {
         var pic = new Facebook(Meteor.user().services.facebook.accessToken);
         var data = pic.getProfilePic();
-        console.log('getProfilePic function');
+        console.log('getProfilePic information retrieved');
         return data;
     }
 });

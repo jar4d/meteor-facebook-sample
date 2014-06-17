@@ -6,22 +6,19 @@ if (Meteor.isClient) {
     }
   });
 
-  // Set session variables
-  Meteor.call('getProfilePic', function(err, data) {
-    return Session.set('profilePic', data.location);
-  });
-
   Template.home.events({
     'click #btn-user-data': function(e) {
-        Meteor.call('getUserData', function(err, data) {
-           $('#result').text(JSON.stringify(data, undefined, 4));
-        });
+      Meteor.call('getUserData', function(err, data) {
+        $('#result').text(JSON.stringify(data, undefined, 4));
+      });
     }
   });
 
-  Template.header.profilePic = function () {
-    return Session.get('profilePic');
-  }
+  Template.header.helpers({
+    profilePic: function() {
+      return Meteor.user().profile.picture;
+    }
+  });
 
 }
 
