@@ -7,14 +7,19 @@
 {{>header}}
   <div id="main">
     <div class="container app-width">
-      {{> home}}
+      {{> renderPage}}
     </div>
   </div>
 {{>footer}}
 </body>
 
 <template name="home">
+  <h3>Home Page template ;)</h3>
     <button class="btn" id="btn-user-data">Get User Data</button>
         <pre id="result"></pre>
+</template>
+
+<template name="profile">
+  <h3>Your Profile</h3>
 </template>
 
