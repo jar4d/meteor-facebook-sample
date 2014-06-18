@@ -20,6 +20,16 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.profile.helpers({
+    getName: function() {
+      return Meteor.user().profile.name;
+    },
+    getEmail: function() {
+      return Meteor.user().services.facebook.email;
+    }
+  });
+
+
 }
 
 
