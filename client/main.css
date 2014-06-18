@@ -14,6 +14,10 @@ a, a:visited {
 /* Nav Bar
 /* ------------------------------ */
 
+.navbar {
+  border: 0;
+}
+
 .navbar .brand {
   margin: 10px;
   padding: 0;
@@ -37,12 +41,14 @@ a, a:visited {
   background: #3F4F5C;
   color: #F6F6F8;
   border: none;
-  border-radius: 0;
 }
 
-.navbar-inner h1 {
-  margin:0;
+.navbar-inner .brand {
+  padding: 15px;
+  margin: 0;
   font-family: Calligraffitti;
+  display: block;
+  float: left;
 }
 
 .navbar-inner a, .navbar-inner a:visited {
@@ -77,6 +83,3 @@ footer {
 /* Profile
 /* ------------------------------ */
 
-#profile {
-  border:1px solid #333;
-}

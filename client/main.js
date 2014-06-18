@@ -26,6 +26,9 @@ if (Meteor.isClient) {
     },
     getEmail: function() {
       return Meteor.user().services.facebook.email;
+    },
+    getGender: function() {
+      return Meteor.user().services.facebook.gender;
     }
   });
 
