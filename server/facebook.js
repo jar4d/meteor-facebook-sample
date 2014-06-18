@@ -50,20 +50,10 @@ Facebook.prototype.getUserData = function() {
     return this.query('me');
 }
 
-Facebook.prototype.getProfilePic = function() {
-    return this.query('me/picture?height=40&width=40');
-}
-
 Meteor.methods({
     getUserData: function() {
         var fb = new Facebook(Meteor.user().services.facebook.accessToken);
         var data = fb.getUserData();
-        return data;
-    },
-    getProfilePic: function() {
-        var pic = new Facebook(Meteor.user().services.facebook.accessToken);
-        var data = pic.getProfilePic();
-        console.log('getProfilePic information retrieved');
         return data;
     }
 });
