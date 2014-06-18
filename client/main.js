@@ -11,6 +11,11 @@ if (Meteor.isClient) {
       Meteor.call('getUserData', function(err, data) {
         $('#result').text(JSON.stringify(data, undefined, 4));
       });
+    },
+    'click #btn-user-friends': function(e) {
+      Meteor.call('getUserFriends', function(err, data) {
+        console.log(data);
+      });
     }
   });
 

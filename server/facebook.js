@@ -50,10 +50,19 @@ Facebook.prototype.getUserData = function() {
     return this.query('me');
 }
 
+Facebook.prototype.getUserFriends = function() {
+    return this.query('me/friends?fields=id,name,relationship_status');
+}
+
 Meteor.methods({
     getUserData: function() {
         var fb = new Facebook(Meteor.user().services.facebook.accessToken);
         var data = fb.getUserData();
+        return data;
+    }, 
+    getUserFriends: function() {
+        var fb = new Facebook(Meteor.user().services.facebook.accessToken);
+        var data = fb.getUserFriends();
         return data;
     }
 });
