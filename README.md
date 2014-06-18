@@ -21,11 +21,13 @@ sudo npm install -g meteorite
 standard-app-packages
 autopublish
 insecure
-bootstrap
 accounts-facebook
 accounts-ui
 router
 npm
+less
+less-bootstrap-3
+font-awesome-4-less
 ```
 
 Initial guide used as the basis for this:
