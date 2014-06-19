@@ -4,7 +4,12 @@
       <div class="container">
         <a href="/" class="brand">flint</a>
         <ul class="nav pull-right">
-          <li>{{#if currentUser}}<img src="{{profilePic}}" />{{/if}}<span><a href="/profile">{{>loginButtons}}</a></span></li>
+          <li>
+            {{#if currentUser}}
+              <a href="{{pathFor 'profile'}}"><img src="{{profilePic}}" /></a>
+            {{/if}}
+            <span>{{>loginButtons}}</span>
+          </li>
         </ul>
       </div>
     </div>
