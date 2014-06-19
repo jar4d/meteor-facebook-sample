@@ -16,6 +16,12 @@ if (Meteor.isClient) {
       Meteor.call('getUserFriends', function(err, data) {
         console.log(data);
       });
+    },
+    'keypress #searchbox': function(e) {
+      console.log(e.currentTarget.value);
+      Meteor.call('searchFB', function(err, data) {
+        console.log(data);
+      });
     }
   });
 

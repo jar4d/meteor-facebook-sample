@@ -54,6 +54,10 @@ Facebook.prototype.getUserFriends = function() {
     return this.query('me/friends?fields=id,name,relationship_status');
 }
 
+Facebook.prototype.searchFB = function() {
+    return this.query('search?type=user&q=Josh+Campoverde');
+}
+
 Meteor.methods({
     getUserData: function() {
         var fb = new Facebook(Meteor.user().services.facebook.accessToken);
@@ -64,5 +68,10 @@ Meteor.methods({
         var fb = new Facebook(Meteor.user().services.facebook.accessToken);
         var data = fb.getUserFriends();
         return data;
+    },
+    searchFB: function() {
+        var fb = new Facebook(Meteor.user().services.facebook.accessToken);
+        var result = fb.searchFB();
+        return result;
     }
 });
