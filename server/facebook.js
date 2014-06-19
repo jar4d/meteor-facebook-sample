@@ -51,7 +51,7 @@ Facebook.prototype.getUserData = function() {
 }
 
 Facebook.prototype.getUserFriends = function() {
-    return this.query('me/friends?fields=id,name,relationship_status');
+    return this.query('me/friends?fields=id,name,relationship_status,political,religion,work,languages,hometown,favorite_teams,education,birthday');
 }
 
 Facebook.prototype.searchFB = function() {
